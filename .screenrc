@@ -5,7 +5,7 @@ hardstatus string "%{.kW}%-w%{.bW}%t [%n]%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d %c"
 
 # Signal
 msgwait 1
-vbell on
+vbell off
 
 # Huge scrollback buffer
 defscrollback 5000
@@ -37,7 +37,7 @@ bindkey "^[OR" prev
 bindkey "^[OS" next
 
 # Get rid of silly xoff stuff
-# Start form
+# Form
 bind s split
 bind c screen 1
 bind ^c screen 1
@@ -55,8 +55,14 @@ bind ^\
 bind \\
 bind h  hardcopy
 bind 'K' kill
+bind '}' history
 
 bind L screen -t dmesg 10 watch "dmesg | tail -n $((LINES-42))"
+bind T screen -t htop 11 htop
+bind A screen -t atop 12 atop
+bind N screen -t nethogs 15 nethogs
+bind V screen -t vnstat 16 vnstat
+bind S screen -t ss 17 ss -s
 
 bind ^h focus left
 bind ^j focus down
