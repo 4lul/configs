@@ -111,7 +111,7 @@ set formatoptions=c,q,r,t
 set background=dark 
 
 " Enable the use of the mouse.
-set mouse=a         
+" set mouse=a         
 
 " scrolls the text so that (when possible) there are always 
 " at least lines visible above and below the cursor.
