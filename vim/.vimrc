@@ -149,7 +149,7 @@ execute pathogen#infect()
 autocmd FileType python setlocal completeopt-=preview
 
 " Colorscheme.
-colorscheme molokai
+colorscheme gruvbox
 
 
 set fileencodings=utf-8,cp1251,cp866,koi8-r
@@ -250,3 +250,7 @@ menu Encoding.windows-1251 :e ++enc=8bit-cp1251<CR>
 menu Encoding.ibm-866 :e ++enc=8bit-ibm866<CR>
 menu Encoding.utf-8 :e ++enc=2byte-utf-8 <CR>
 map <F10> :emenu Encoding.<TAB> 
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_theme='simple'
