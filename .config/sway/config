@@ -221,7 +221,9 @@ input * {
 
 include /etc/sway/config.d/*
 
-font pango:DejavuSansMono Medium 13
+font pango:DejavuSansMono Medium 15
+
+bindsym $mod+Pause exec sh ~/.config/sway/toggle.sh
 
 exec /usr/bin/pipewire &
 exec /usr/bin/pipewire-pulse &
