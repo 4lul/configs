@@ -1,0 +1,20 @@
+sudo apt-get install vim git 
+mkdir github
+cd github
+git clone https://github.com/4lul/configs
+cd configs/vim
+git diff
+git diff --staged
+git commit -v
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "4lul@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+ssh -T git@github.com
+git remote set-url origin git@github.com:4lul/configs.git
+git config user.email "4lusal@gmail.com"
+git config user.name "pi"
+sudo vim ~/.bashrc 
+echo "PROMPT_COMMAND=\"history -a;$PROMPT_COMMAND\"" >> ~/.bashrc 
+vim .bash_history 
+cd github/configs/
